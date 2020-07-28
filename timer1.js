@@ -1,5 +1,8 @@
-const beeps = process.argv.slice(2).map(Number).sort((a,b) => a - b); // turns argument into array of numbers, sorted
+const beeps = process.argv.slice(2).map.sort((a,b) => a - b); // turns argument into array of numbers, sorted
 
+if (!beeps.length) {
+  return process.stdout.write('\x07 Invalid! \n');   
+}
 for (const beep of beeps) {
   if (!isNaN(beep)) {
   return process.stdout.write('\x07 Invalid! \n'); 

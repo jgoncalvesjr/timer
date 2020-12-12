@@ -21,7 +21,7 @@ stdin.on('data', (key) => {
 });
 
 const countdown = (timer) => {
-  if (isNaN(timer)) {
+  if (isNaN(timer) || timer < 1 || timer > 9) {
     console.log(`Not a valid timer, try again!\n`);
     askCountdown("Set a timer from 1 to 9: ");
   } else {
